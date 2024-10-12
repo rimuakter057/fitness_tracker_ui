@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
                   Positioned(
                       right: 8,
                       bottom: 3,
-                      top: 3,
+                      top: 5,
                       child: CustomCircle(
                         size: size,
                         color: AppColors.limeColor,
