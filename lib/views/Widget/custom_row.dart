@@ -22,8 +22,8 @@ class CustomRow extends StatelessWidget {
           size: size.height * 0.03,
         ),
         const SizedBox(width: 5,),
-        Text(text!,style: TextStyle(fontWeight: FontWeight.w500,
-          fontSize: size.height*.025,
+        Text(text!,style: TextStyle(fontWeight: FontWeight.w400,
+          fontSize: size.height*.02,
           color: AppColors.blackOpacityColor,
         ),)
       ],

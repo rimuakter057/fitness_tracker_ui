@@ -1,4 +1,5 @@
 
+import 'package:fitness_tracker_ui/views/FitnessTracker/fitness_tracker_page.dart';
 import 'package:fitness_tracker_ui/views/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
 
