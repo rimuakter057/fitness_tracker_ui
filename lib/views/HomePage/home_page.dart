@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
         title: const Text("Fitness Tracker",
         style: TextStyle(
           fontWeight: FontWeight.w400,
-          fontSize: 16,
+          fontSize: 18,
           color: AppColors.whiteColor
         ),
 
@@ -244,7 +244,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           borderData: FlBorderData(show: false),
-                          gridData: FlGridData(show: false),
+                          gridData: const FlGridData(show: false),
                           barGroups: [
                             BarChartGroupData(x: 0, barRods: [
                               BarChartRodData(
