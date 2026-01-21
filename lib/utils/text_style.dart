@@ -17,7 +17,8 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text,style: TextStyle(fontSize:fontSize?? size.height*.03,
-        fontWeight:fontWeight?? FontWeight.w600,color:color?? AppColors.whiteColor
+        fontWeight:fontWeight?? FontWeight.w600,color:color?? AppColors.whiteColor,
+      height: 1.1,
     ),);
   }
 }

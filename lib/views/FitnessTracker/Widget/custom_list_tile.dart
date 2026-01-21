@@ -20,7 +20,7 @@ class CustomListTile extends StatelessWidget {
       leading: CustomCircle(
         height:  size.height * .05,
         width:  size.width * .05,
-        size: size,
+
         color: AppColors.limeColor,
       ),
       title: CustomText(

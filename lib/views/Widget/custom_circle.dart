@@ -11,7 +11,7 @@ class CustomCircle extends StatelessWidget {
 
   const CustomCircle({
     super.key,
-    required this.size,
+
      this.icon,
     this.iconSize,
     this.height,
@@ -20,20 +20,20 @@ class CustomCircle extends StatelessWidget {
     this.iconColor,
   });
 
-  final Size size;
+
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? size.height * .08,
-      width: width ?? size.width * .08,
+      height:height?? 24,
+      width:width?? 24,
       decoration: BoxDecoration(
           color: color ?? AppColors.whiteColor.withOpacity(.3),
           shape: BoxShape.circle),
       child: Center(
         child: Icon(
           icon,
-          size: iconSize ?? size.height * .03,
+          size: iconSize ?? 24,
           color:iconColor?? AppColors.whiteColor,
         ),
       ),

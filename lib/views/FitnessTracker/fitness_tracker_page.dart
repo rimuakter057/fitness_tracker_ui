@@ -18,14 +18,14 @@ class FitnessTrackerPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: CustomCircle(
-          size: size,
+
           icon: Icons.arrow_back_ios,
         ),
         centerTitle: true,
         title: CustomText(size: size, text: 'Fitness Tracker'),
         actions: [
           CustomCircle(
-            size: size,
+
             icon: Icons.notification_add_outlined,
           ),
         ],
@@ -103,7 +103,7 @@ class FitnessTrackerPage extends StatelessWidget {
                   children: [
                     ListTile(
                       leading: CustomCircle(
-                        size: size,
+
                         color: AppColors.limeColor,
                         icon: Icons.favorite_border,
                         height: size.height * .15,

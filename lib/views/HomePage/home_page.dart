@@ -18,9 +18,12 @@ class HomePage extends StatelessWidget {
       backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: CustomCircle(
-          size: size,
-          icon: Icons.grid_view_outlined,
+        leadingWidth: 40,
+        leading: const CustomCircle(
+          height: 20,
+          width: 20,
+
+          icon: Icons.menu,
         ),
         centerTitle: true,
 
@@ -33,9 +36,10 @@ class HomePage extends StatelessWidget {
 
         ),
 
-        actions: [
+        actions: const [
           CustomCircle(
-            size: size,
+            height: 40,
+            width: 40,
             icon: Icons.notification_add_outlined,
           ),
         ],
@@ -46,6 +50,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 12,),
               const Text("Make Your",
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
@@ -70,7 +75,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 width: size.width,
-                height: size.height * .27,
+                height: size.height * .25,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: AppColors.primaryColor,
@@ -89,7 +94,7 @@ class HomePage extends StatelessWidget {
                           const Text("Full Body",
                             style: TextStyle(
                                 fontWeight: FontWeight.w500,
-                                fontSize: 18,
+                                fontSize: 16,
                                 color: AppColors.backgroundColor
                             ),
         
@@ -101,13 +106,13 @@ class HomePage extends StatelessWidget {
                           const Text("Exercise X3",
                             style: TextStyle(
                                 fontWeight: FontWeight.w500,
-                                fontSize: 18,
+                                fontSize: 16,
                                 color: AppColors.backgroundColor
                             ),
         
                           ),
         
-                    const SizedBox(height: 16,),
+                    const SizedBox(height: 12,),
                           CustomRow(
                             size: size,
                             icon: Icons.local_fire_department_outlined,
@@ -142,18 +147,18 @@ class HomePage extends StatelessWidget {
                         bottom: 3,
                         top: 5,
                         child: CustomCircle(
-                          size: size,
+
                           color: AppColors.limeColor,
                           height: size.height * .5,
                           width: size.width * .5,
                         )),
                     Positioned(
-                      right: 5,
+                      right: 20,
                       bottom: 0,
                       child: Image.asset(
                         "assets/images/image_one-removebg-preview.png",
-                        width: size.width * .45,
-                        height: size.height * .4,
+                        width: size.width * .41,
+                        height: size.height * .38,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -163,16 +168,16 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 18,
               ),
-              ///chart here
+              ///chart here===================================
 
 
           Container(
             width: size.width,
-            height: size.height * 0.32,
+            height: size.height * 0.30,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 colors: [AppColors.secondaryColor, AppColors.backgroundColor],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -192,8 +197,8 @@ class HomePage extends StatelessWidget {
                   "Weekly Progress",
                   style: TextStyle(
                       color: AppColors.whiteColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
                 ),
                 const SizedBox(height: 12),
                 Expanded(
@@ -333,13 +338,13 @@ class HomePage extends StatelessWidget {
 
 
 
-              //=========================================
+              ///km=========================================
               Row(
                 children: [
                   Expanded(
                     child: CustomCardItem(
                       size: size,
-                      data: "Running \n Distance",
+                      data: "Running Distance",
                       distance: "1.8 km",
                       fontColor: AppColors.backgroundColor,
                       backgroundColor: AppColors.primaryColor,
@@ -352,15 +357,16 @@ class HomePage extends StatelessWidget {
                   Expanded(
                     child: CustomCardItem(
                       size: size,
-                      data: "Total \n Cycling",
+                      data: "Total Cycling",
                       icon: Icons.directions_bike_outlined,
                     ),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 38,
+                height: 12,
               ),
+              ///appointment=====================================================================
               Container(
         
                 padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
@@ -371,8 +377,8 @@ class HomePage extends StatelessWidget {
                 child: ListTile(
                   title: const Text("Appointment",
                     style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
                         color: AppColors.whiteColor
                     ),
         
@@ -388,7 +394,7 @@ class HomePage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   trailing: CustomCircle(
-                    size: size,
+
                     height: size.height * .1,
                     width: size.width * .1,
                     color: AppColors.primaryColor,

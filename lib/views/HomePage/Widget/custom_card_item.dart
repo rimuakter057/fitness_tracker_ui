@@ -21,38 +21,49 @@ class CustomCardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(8),
       width: size.width * 0.5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color:backgroundColor?? AppColors.secondaryColor,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Align(
-            alignment: AlignmentDirectional.topEnd,
-            child: CustomCircle(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomText(
               size: size,
-              icon:icon?? Icons.directions_run,
-              color: AppColors.limeColor,
-              height: size.height * .15,
-              width: size.width * .15,
+              text: data.toString(),
+              color:fontColor?? Colors.white70,
+              fontWeight: FontWeight.w400,
+              fontSize: 14,
             ),
-          ),
-          CustomText(
-            size: size,
-            text: data.toString(),
-            color:fontColor?? Colors.white70,
-            fontWeight: FontWeight.w300,
-          ),
-          CustomText(
-            size: size,
-            text:distance?? "73 km",
-            color:distanceColor?? AppColors.primaryColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ],
+            const SizedBox(height: 6),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CustomCircle(
+
+                  icon:icon?? Icons.directions_run,
+                  color: AppColors.limeColor,
+                  height: 24,
+                  width: 24,
+                  iconSize: 16,
+                ),
+                  const SizedBox(width: 4),
+                CustomText(
+                  size: size,
+                  text:distance?? "73 km",
+                  color:distanceColor?? AppColors.primaryColor,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                ),
+              ],
+            ),
+            const SizedBox(height: 4,),
+          ],
+        ),
       ),
     );
   }
