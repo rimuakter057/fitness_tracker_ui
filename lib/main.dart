@@ -1,6 +1,4 @@
-
-import 'package:fitness_tracker_ui/views/FitnessTracker/fitness_tracker_page.dart';
-import 'package:fitness_tracker_ui/views/HomePage/home_page.dart';
+import 'package:fitness_tracker_ui/views/main_navigation_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +10,14 @@ class FitnessTrackerUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage (),
+      title: 'Digital Fitness Tracker',
+      theme: ThemeData(
+        useMaterial3: true,
+        fontFamily: 'Roboto',
+      ),
+      home: const MainNavigationPage(),
     );
   }
 }
-
